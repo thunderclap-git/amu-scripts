@@ -48,25 +48,12 @@ function calculateMonthlyPayment() {
 	const ROI = 10;
 	const per_month = ROI / 12;
 	const eligible_emi = net_salary * (balance / 100);
-    console.log(eligible_emi);
-
 	const total_to_repay = eligible_emi * tenure_into_month;
-    console.log(total_to_repay);
-
 	const step_11 = (1500 * 18) / 100 + 1500;
-    console.log(step_11);
-
 	const step_12 = total_to_repay * (ROI / 100);
-    console.log(step_12);
-
 	const step_13 = step_12 * tenures;
-    console.log(step_13);
-
 	const step_14 = total_to_repay - step_13;
-    console.log(step_14);
-
 	const step_15 = step_14 - step_11;
-    console.log(step_15);
 
 	eligibleEmi.innerHTML = '₹' + eligible_emi.toFixed(0);
 	eligileLoan.innerHTML = '₹' + step_14.toFixed(0);

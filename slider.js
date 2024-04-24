@@ -54,7 +54,6 @@ sliders.forEach((main) => {
 		if (e) newLeft = e.clientX - trackRect.left;
 		// if not an event
 		else newLeft = (trackRect.width * (value - min)) / (max - min);
-		console.log((trackRect.width * (value - min)) / (max - min));
 
 		let rightLimit = track.offsetWidth - handle.offsetWidth;
 
