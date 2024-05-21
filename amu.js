@@ -55,8 +55,11 @@ function calculateMonthlyPayment() {
 	const step_14 = total_to_repay - step_13;
 	const step_15 = step_14 - step_11;
 
-	eligibleEmi.innerHTML = '₹' + eligible_emi.toFixed(0);
-	eligileLoan.innerHTML = '₹' + step_14.toFixed(0);
+	if(eligibleEmi < 0) eligibleEmi.innerHTML('Non Eligible');
+	else eligibleEmi.innerHTML = '₹' + eligible_emi.toFixed(0);
+
+	if(eligileLoan < 0) eligileLoan.innerHTML('Non Eligible');
+	else eligileLoan.innerHTML = '₹' + step_14.toFixed(0);
 
 	updateChart(step_14.toFixed(0), eligible_emi.toFixed(0));
 }
